@@ -1,0 +1,179 @@
+.container{
+    background-color: var(--primary);
+    height: auto;
+    width: 100%;
+    color: white;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    height: auto;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    height: 500px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.topText{
+    padding-top: 2rem;
+}
+
+.subHeading {
+    color: var(--secondary);
+    letter-spacing: 0.3rem;
+    font-family: var(--font-bebas);
+    font-weight: 400;
+}
+
+.heading {
+    font-size: 3rem;
+    font-family: var(--font-bebas);
+    font-weight: 400;
+}
+
+.text{
+    font-family: var(--font-urbanist);
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 35px;
+    column-gap: 50px;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.link{
+    display: flex;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.link:hover .linkSubHeading{
+    text-decoration: underline;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icon{
+   width: 40px;
+   height: auto;
+}
+.linkHeading{
+    font-weight: 400;
+}
+
+.linkSubHeading{
+    font-family: var(--font-urbanist);
+    font-style: 1rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formLabel{
+    font-size: 1.5rem;
+}
+
+.formInput{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 350px;
+    font-family: var(--font-urbanist);
+}
+.formTextarea{
+    font-size: 1rem;
+    height: 150px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 350px;
+    font-family: var(--font-urbanist);
+    resize: none;
+}
+.formButton {
+    padding: 0.35rem 2rem 0.35rem 2rem;
+    height: auto;
+    min-width: 200px;
+    width: 350px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-family: var(--font-bebas);
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: var(--shadow);
+  }
+  .formButton:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  .formButton:hover {
+    color: var(--primary);
+  }
+  .formButton:hover:before {
+    width: 100%;
+  }
+
+@media (max-width: 600px) {
+    .contact{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left{
+        justify-content: center;
+        width: 95vw;
+    }
+    .right{
+        width: 95vw;
+    }
+}

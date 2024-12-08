@@ -1,0 +1,174 @@
+.container {
+  height: 700px;
+}
+
+.header {
+  height: 500px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/* CSS FOR THE LEFT SIDE OF THE HEADER */
+.left {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headingTop {
+  color: var(--secondary);
+  font-family: var(--font-bebas);
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+}
+.heading {
+  color: white;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.subHeading {
+  color: white;
+  font-family: var(--font-urbanist);
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  padding-top: 40px;
+  gap: 50px;
+  color: white;
+}
+
+.button {
+  padding: 0.35rem 2rem 0.35rem 2rem;
+  height: auto;
+  min-width: 200px;
+  width: 250px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-family: var(--font-bebas);
+  background-color: var(--secondary);
+  color: var(--primary);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: var(--shadow);
+}
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.button:hover {
+  color: var(--primary);
+}
+.button:hover:before {
+  width: 100%;
+}
+
+.button2 {
+  background-color: transparent;
+  font-family: var(--font-bebas);
+  font-weight: 400;
+  border: none;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* CSS FOR THE RIGHT SIDE OF THE HEADER */
+.right {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  top: 30px;
+  left: -150px;
+  height: 470px;
+  width: auto;
+  z-index: 0;
+}
+.customShapeDivider {
+  background-color: var(--primary);
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.customShapeDivider svg {
+  position: relative;
+  display: block;
+  width: calc(124% + 1.3px);
+  height: 80px;
+  transform: rotateY(180deg);
+}
+
+.shapeFill {
+  fill: var(--background);
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    color: white;
+  }
+
+  .left {
+    width: 90vw;
+    align-items: center;
+    height: auto;
+  }
+  .heading {
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .button2 {
+    color: white;
+  }
+  .right {
+    display: flex;
+    height: auto;
+    width: 400px;
+    justify-content: center;
+  }
+  .image {
+    width: 130vw;
+    height: auto;
+    position: static;
+  }
+  .customShapeDivider {
+    width: 100vw;
+  }
+}

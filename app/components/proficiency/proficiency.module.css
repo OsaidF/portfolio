@@ -1,0 +1,318 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.skills {
+  height: 800px;
+  width: 1000px;
+  color: var(--font-color);
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.headingTop {
+  color: #868686;
+  font-family: var(--font-bebas);
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.subHeading {
+  font-family: var(--font-urbanist);
+  font-weight: 500;
+  text-align: center;
+}
+
+.technologies {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technologies h4 {
+  font-size: 2.2rem;
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+/* CSS FOR THE PILLS AND HOVER EFFECTS */
+
+.pills {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
+.pill {
+  font-family: var(--font-bebas);
+  font-weight: 400;
+  min-width: 200px;
+  min-height: 80px;
+  display: flex;
+  border-radius: 10px;
+  padding-right: 10px;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--gray);
+  z-index: 0;
+  box-shadow: var(--shadow);
+}
+
+.pill::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--primary);
+  transition: all 0.3s;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.pill:hover:before {
+  width: 100%;
+}
+
+.pill:hover {
+  color: white;
+}
+.pill:hover .pillSubheading {
+  color: var(--secondary);
+}
+.pill:hover .pillImage {
+  background-color: white;
+}
+
+.pill:hover .imageAlt {
+  z-index: 1;
+}
+.pillImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+}
+.pillImage {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  background-color: var(--primary);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pillSubheading {
+  font-size: 0.9rem;
+  color: #868686;
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+.pillHeading {
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: auto;
+  z-index: 0;
+}
+.imageAlt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: auto;
+  z-index: -1;
+}
+
+/* MODAL CSS */
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  place-content: center;
+  place-items: center;
+  padding: 20px;
+  overflow: auto;
+  will-change: transform;
+  z-index: 10;
+  cursor: pointer;
+}
+.modal {
+  display: flex;
+  z-index: 9999;
+  overflow: hidden;
+  width: 600px;
+  height: 283px;
+  background-color: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+  will-change: transform;
+  padding: 6px;
+  border-radius: 0.75rem;
+}
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  z-index: 30;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  background-color: #FF2C2C;
+  border: none;
+  border-radius: 0.3rem;
+  width: 30px;
+  height: 30px;
+}
+
+.closeImage {
+  width: 30px;
+  height: auto;
+}
+
+.modalImageContainer {
+  height: 270px;
+  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.modalImage {
+  height: 250px;
+  width: auto;
+}
+
+.modalText {
+  padding-left: 20px;
+}
+
+.modalSubheading {
+  font-size: 1rem;
+  color: var(--secondary);
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+.modalHeading {
+  font-size: 2.5rem;
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+.modalParagraph {
+  font-family: var(--font-urbanist);
+  height: 160px;
+  margin-bottom: 10px;
+  scrollbar-width: thin;
+}
+
+.modalExperience {
+  font-size: 1.3rem;
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-top: 100px;
+    overflow: hidden;
+  }
+  .skills {
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .headings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+  }
+  .pill {
+    width: 80vw;
+  }
+  .text {
+    padding-left: 20px;
+  }
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .modalImageContainer {
+    width: 200px;
+    height: 200px;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+  }
+  .modalImage {
+    width: 200px;
+    height: auto;
+  }
+  .modalParagraph {
+    height: auto;
+  }
+  .close {
+    width: 30px;
+    height: 30px;
+  }
+  .modalText {
+    margin: 1.5rem 0rem 1.5rem 0rem;
+  }
+}

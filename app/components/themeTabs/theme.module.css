@@ -1,0 +1,66 @@
+.container {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.switch {
+  display: inline-block;
+  font-size: 20px; /* 1 */
+  height: 1em;
+  width: 2em;
+  background-color: #bdb9a6;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.switch .div {
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.switch input:checked + .div {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  cursor: pointer;
+}
+
+.input:checked .switch{
+  background-color: aquamarine;
+}
+
+.icons {
+  width: 20px;
+  height: auto;
+  position: relative;
+}
+
+.card{
+  display: flex;
+  width: 20px;
+}
+
+.front,
+.back{
+  height: 20px;
+  backface-visibility: hidden;
+}
+
+.back{
+  position: relative;
+  top: 0;
+  left: -20px
+}

@@ -1,0 +1,182 @@
+.container {
+  background-color: var(--primary);
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarDesktop {
+  z-index: 10;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color);
+  clip-path: inset(0% 0% -1000% 0% round 8px);
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  z-index: 30;
+  box-shadow: var(--shadow);
+  background-color: white;
+  border-radius: 5px;
+  background-color: var(--background);
+}
+
+.itemContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1100px;
+}
+.logo {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo h1 {
+  font-family: var(--font-bebas);
+  font-weight: 400;
+}
+
+.links {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: inherit;
+}
+
+.link {
+  list-style-type: none;
+  font-size: 1.1rem;
+  position: relative;
+  color: inherit;
+}
+
+.active {
+  color: var(--secondary);
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  transition: 0.25s ease-in-out;
+  background-color: var(--secondary);
+}
+
+.link:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+/* CSS FOR JUST THE BUTTON */
+.button {
+  padding: 0rem 2rem 0rem 2rem;
+  border: none;
+  height: 40px;
+  width: auto;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  font-family: var(--font-bebas);
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--secondary);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.button:hover {
+  color: var(--primary);
+}
+.button:hover:before {
+  width: 100%;
+}
+.mobileNav {
+  display: none;
+}
+.navElements {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container{
+    overflow: hidden;
+  }
+  .links {
+    gap: 0rem;
+  }
+  .link {
+    display: none;
+  }
+  .button {
+    display: none;
+  }
+  .mobileNav {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding-top: 7px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: white;
+    display: block;
+  }
+  .navElements {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    top: 55px;
+    background-color: white;
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    border-radius: 5px;
+    align-items: center;
+    gap: 0.6rem;
+    color: black;
+  }
+  .navElements li {
+    list-style-type: none;
+  }
+}
